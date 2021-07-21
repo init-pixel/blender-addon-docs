@@ -1,0 +1,12 @@
+site_name: Init Pixel Blender Addons
+site_url: https://example.com/
+nav:
+    - Home: index.md
+    - About: about.md
+    - Spritehandler:
+        - Overview: Spritehandler/overview.md
+        - Sheet Use: Spritehandler/sheet_usage.md
+        - Sheet Creation: Spritehandler/sheet_creation.md
+        - Tutorials: Spritehandler/tutorials.md
+        - Legacy Docs: Spritehandler/legacy.md
+theme: readthedocs

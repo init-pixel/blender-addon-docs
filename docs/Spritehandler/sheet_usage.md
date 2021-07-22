@@ -26,7 +26,7 @@ TODO: Add video guide
 Transcription:
 Spritehandler can be used to generate mesh object based on the alpha channel of image.
 By specifying the cell counts, the operator can output individual objects in a new collection.
-The primary purpose of meshing images is for instancing, wether with Geometry Nodes, Particles, or Dupliverts.
+The primary purpose of meshing images is for instancing, wether with Geometry Nodes, Particles, or Dupliverts/Duplifaces.
 By creating a rough representation of the geometry, rather that using a simple plane with alpha, fewer transparency paths are required in rendering and render times are drastically reduced.
 
 A full explanation of each menu item can be found in the [UI Content](ui_contents.md) page of the documentation.

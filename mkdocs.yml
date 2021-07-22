@@ -1,7 +1,7 @@
 site_name: Init Pixel Blender Addons
 site_url: https://example.com/
 nav:
-    - Home: index.md
+    # - Home: index.md
     - Spritehandler:
         - Overview: Spritehandler/overview.md
         - UI Content: Spritehandler/ui_contents.md

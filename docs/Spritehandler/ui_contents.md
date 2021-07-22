@@ -2,6 +2,7 @@
 ## Image Editor Panel
 
 ![Image Editor Panel](images/IMAGE_EDITOR_panel_screenshot.png)
+
 | Create | Spritesheet Creation |
 | - | - |
 | Spritesheet from Files | Open's a file browser to select files to create a spritesheet from |

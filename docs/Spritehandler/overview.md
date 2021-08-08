@@ -20,3 +20,7 @@ Spritehandler commercial addon  for using, and generating, spritesheets/texture 
 * Cleanup mesh data by removing small islands based on their area.
 * Set the bounding box of selected objects to their local bounding box corners/edges
 
+
+<div class="video-wrapper">
+  <iframe width="1280" height="720" src="https://youtu.be/nBFQu9EYY6o" frameborder="0" allowfullscreen></iframe>
+</div>

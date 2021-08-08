@@ -1,4 +1,6 @@
 # Spritehandler
+[Blendermarket](https://blendermarket.com/products/spritehandler)
+
 Spritehandler commercial addon  for using, and generating, spritesheets/texture atlases within Blender.
 
 ## Feature Overview
@@ -19,10 +21,3 @@ Spritehandler commercial addon  for using, and generating, spritesheets/texture 
 ### Helper Function
 * Cleanup mesh data by removing small islands based on their area.
 * Set the bounding box of selected objects to their local bounding box corners/edges
-
-
-<!-- <div class="video-wrapper">
-  <iframe width="1280" height="720" src="https://youtu.be/nBFQu9EYY6o" frameborder="0" allowfullscreen></iframe>
-</div> -->
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nBFQu9EYY6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

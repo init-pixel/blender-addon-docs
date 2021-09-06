@@ -21,3 +21,9 @@ Spritehandler commercial addon  for using, and generating, spritesheets/texture 
 ### Helper Function
 * Cleanup mesh data by removing small islands based on their area.
 * Set the bounding box of selected objects to their local bounding box corners/edges
+
+
+## Installation
+Installation of Spritehandler is the same as any other addon.
+See official Blender documentation for full instructions if required.
+[Blender Addons](https://docs.blender.org/manual/en/latest/editors/preferences/addons.html)

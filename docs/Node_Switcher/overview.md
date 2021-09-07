@@ -1,9 +1,12 @@
-#Node Switcher Blender Addon
+# Node Switcher Blender Addon
 ## Overview
 Blender addon for generating node networks to switch and/or blend between various
 datatypes.
 
-Currently supports all socket types used by Cycles/Eevee with plans to support other render engines in future.
+Currently supports all shader socket types used by Cycles/Eevee with plans to support other render engines in future.
+
+## Updates
+Sept 8, 2021 | 0,1 | First Release
 
 ## Switch Types
 * Hard Switcher. Hard swithing for arbitrary uniform socket types. 

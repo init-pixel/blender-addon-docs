@@ -48,7 +48,7 @@ Create a node network that calculates a weighted overage of the inputs. Not comp
 * Mask 0..: The keying results as individual masks
 * ID Map: ID Map (or other color input) to key.
 * Tolerance: Tolerance of the keying. Increase make the keying colors less strict
-* Gamma**: Gamma of each mask. The contrast of each internal masking operation.
+* Gamma: Gamma of each mask. The contrast of each internal masking operation.
 ### New Switcher From Selected  
 
 ![New Switch From Selected](images/new_switch.png){: style="width:400px"}  

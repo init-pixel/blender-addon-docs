@@ -6,11 +6,14 @@ datatypes.
 Currently supports all shader socket types used by Cycles/Eevee with plans to support other render engines in future.
 
 ## Updates
-Oct 12th, 2021 | 0.2 | ID Key with Auto detect  
-Sept 8th, 2021 | 0.1 | First Release  
+| Date | Version | Summary |
+| - | - | - |
+| Oct 12th, 2021 | 0.2 | ID Key with Auto detect |
+| Sept 8th, 2021 | 0.1 | First Release |
 
 ## Switch Types
-#### ID/RGB Switcher. Switching based on the colors of an input with auto detection for image input.  
+#### ID/RGB Switcher.  
+Switching based on the colors of an input with auto detection for image input.  
 <iframe width="560" height="400" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
 
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   -->

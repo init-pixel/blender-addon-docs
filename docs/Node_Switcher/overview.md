@@ -14,7 +14,7 @@ Currently supports all shader socket types used by Cycles/Eevee with plans to su
 ## Switch Types
 #### ID/RGB Switcher.  
 Switching based on the colors of an input with auto detection for image input.  
-<iframe width="560" height="400" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+<iframe width="560" height="400" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="ID Key Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
 
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   -->
 
@@ -42,8 +42,9 @@ Create a node network that calculates a weighted overage of the inputs. Not comp
 * Socket Type: The socket types to be used for switch inputs.
 ### ID Switch node  
 
-![ID Switch Node](images/id_switch_node.png){: style="width:400px"}  
-* Result: The switched result
+![ID Switch Node](images/id_switch_node.png){: style="height:400px"}  
+
+* Result: The switched result  
 * Mask 0..: The keying results as individual masks
 * ID Map: ID Map (or other color input) to key.
 * Tolerance: Tolerance of the keying. Increase make the keying colors less strict
@@ -51,6 +52,7 @@ Create a node network that calculates a weighted overage of the inputs. Not comp
 ### New Switcher From Selected  
 
 ![New Switch From Selected](images/new_switch.png){: style="width:400px"}  
+
 * Socket Type: Tolerance of the keying. Increase make the keying colors less strict
 * Switch Type: Method of switching. See [switching types](#switch-types) section for more details.
 

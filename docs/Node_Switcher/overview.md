@@ -10,23 +10,37 @@ Oct 12th, 2021 | 0.2 | ID Key with Auto detect
 Sept 8th, 2021 | 0.1 | First Release  
 
 ## Switch Types
-* ID/RGB Switcher. Switching based on the colors of an input with auto detection for image input.  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+#### ID/RGB Switcher. Switching based on the colors of an input with auto detection for image input.  
+<iframe width="560" height="400" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
 
-* Hard Switcher. Hard value based switching for arbitrary uniform socket types. 
-![Hard Switching](gifs/hard_switching.gif)
-* Soft Switcher. Blended value based switching for arbitrary uniform socket types
-![Blended Switching](gifs/blended_frames.gif)
-* Weighted average switch. Create a node network that calculates a weighted overage of the inputs. Not compatible with shader socket types.
-![Weighted Average Switching](gifs/weighted_average_blending.gif)
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   -->
+
+#### Hard Switcher: Hard value based switching for arbitrary uniform socket types. 
+![Hard Switching](gifs/hard_switching.gif){: style="width:400px"}  
+#### Soft Switcher: Blended value based switching for arbitrary uniform socket types
+![Blended Switching](gifs/blended_frames.gif){: style="width:400px"}  
+#### Weighted average switch: Create a node network that calculates a weighted overage of the inputs. Not compatible with shader socket types.
+![Weighted Average Switching](gifs/weighted_average_blending.gif){: style="width:400px"}  
 
 ## Parameters
-* ID Key from Selected  
-![New ID Keyer](images/new_id_switch.png)  
-* ID Switch node  
-![ID Switch Node](images/id_switch_node.png){: style="height:150px;width:150px"}  
-* New Switcher From Selected  
-![New Switch From Selected](images/new_switch.png){: style="height:150px;width:150px"}  
+### ID Key from Selected  
+![New ID Keyer](images/new_id_switch.png){: style="width:400px"}  
+**Important**: High value resolution and low sample intervals rarely improve color detection but will greatly increase node creation time.
+* **Value Resolution**: The color depth to use for sampling.
+* **Sample Interval**: The spatial interval to use for sampling. Eg. A sample of 4 means a 1024x1024 image will be processed as 256x256
+* **ID Limit**: The maximum number of IDs that will be output. Use a higher value than you need to account for noise, backgrounds, and padding.
+* **Socket Type**: The socket types to be used for switch inputs.
+### ID Switch node  
+![ID Switch Node](images/id_switch_node.png){: style="width:400px"}  
+* **Result**: The switched result
+* **Mask 0...**: The keying results as individual masks
+* **ID Map**: ID Map (or other color input) to key.
+* **Tolerance**: Tolerance of the keying. Increase make the keying colors less strict
+* **Gamma**: Gamma of each mask. The contrast of each internal masking operation.
+### New Switcher From Selected  
+![New Switch From Selected](images/new_switch.png){: style="width:400px"}  
+* **Socket Type**: Tolerance of the keying. Increase make the keying colors less strict
+* **Switch Type**: Method of switching. See [switching types](#switch-types) section for more details.
 
 ## New Node Groups
 * Value Lerp

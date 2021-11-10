@@ -12,3 +12,6 @@ nav:
     - Node Switcher:
         - Overview: Node_Switcher/overview.md
 theme: readthedocs
+markdown_extensions:
+  - attr_list
+  - md_in_html

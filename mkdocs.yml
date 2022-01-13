@@ -7,7 +7,6 @@ nav:
         - UI Content: Spritehandler/ui_contents.md
         - Sheet Use: Spritehandler/sheet_usage.md
         - Sheet Creation: Spritehandler/sheet_creation.md
-        - Tutorials: Spritehandler/tutorials.md
         - Legacy Docs: Spritehandler/legacy.md
     - Node Switcher:
         - Overview: Node_Switcher/overview.md

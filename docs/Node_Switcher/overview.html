@@ -41,20 +41,165 @@
 datatypes.</p>
 <p>Currently supports all shader socket types used by Cycles/Eevee with plans to support other render engines in future.</p>
 <h2 id="updates">Updates</h2>
-<p>Sept 8, 2021 | 0,1 | First Release</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Version</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oct 12th, 2021</td>
+<td>0.2</td>
+<td>ID Key with Auto detect</td>
+</tr>
+<tr>
+<td>Sept 8th, 2021</td>
+<td>0.1</td>
+<td>First Release</td>
+</tr>
+</tbody>
+</table>
 <h2 id="switch-types">Switch Types</h2>
-<ul>
-<li>Hard Switcher. Hard swithing for arbitrary uniform socket types.
-<img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/hard_switching.gif" alt="Hard Switching"></li>
-<li>Soft Switcher. Blended switching for arbitrary uniform socket types
-<img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/blended_frames.gif" alt="Blended Switching"></li>
-<li>Weighted average switch. Create a node network that calculates a weighted overage of the inputs. Not compatible with shader socket types (Diffuse, Principled, etc).
-<img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/weighted_average_blending.gif" alt="Weighted Average Switching"></li>
-</ul>
+<h4 id="idrgb-switcher">ID/RGB Switcher.</h4>
+<p>Switching based on the colors of an input with auto detection for image input.</p>
+<iframe width="560" height="400" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="ID Key Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+<h4 id="hard-switcher">Hard Switcher:</h4>
+<p>Hard value based switching for arbitrary uniform socket types.<br>
+<img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/hard_switching.gif" alt="Hard Switching">{: style=&quot;width:400px&quot;}</p>
+<h4 id="soft-switcher">Soft Switcher:</h4>
+<p>Blended value based switching for arbitrary uniform socket types.<br>
+<img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/blended_frames.gif" alt="Blended Switching">{: style=&quot;width:400px&quot;}</p>
+<h4 id="weighted-average-switch">Weighted average switch:</h4>
+<p>Create a node network that calculates a weighted overage of the inputs. Not compatible with shader socket types.<br>
+<img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/weighted_average_blending.gif" alt="Weighted Average Switching">{: style=&quot;width:400px&quot;}</p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="id-key-from-selected">ID Key from Selected</h3>
+<p><img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/images/new_id_switch.png" alt="New ID Keyer">{: style=&quot;width:400px&quot;}</p>
+<p><strong>Important</strong>: High value resolution and low sample intervals rarely improve color detection but will greatly increase node creation time.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value Resolution</td>
+<td>The color depth to use for sampling.</td>
+</tr>
+<tr>
+<td>Sample Interval</td>
+<td>The spatial interval to use for sampling. Eg. A sample of 4 means a 1024x1024 image will be processed as 256x256.</td>
+</tr>
+<tr>
+<td>ID Limit</td>
+<td>The maximum number of IDs that will be output. Use a higher value than you need to account for noise, backgrounds, and padding.</td>
+</tr>
+<tr>
+<td>Socket Type</td>
+<td>The socket types to be used for switch inputs.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="id-switch-node">ID Switch node</h3>
+<p><img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/images/id_switch_node.png" alt="ID Switch Node">{: style=&quot;height:400px&quot;}</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Result</td>
+<td>The switched result</td>
+</tr>
+<tr>
+<td>Mask 0..</td>
+<td>The keying results as individual masks</td>
+</tr>
+<tr>
+<td>ID Map</td>
+<td>ID Map (or other color input) to key.</td>
+</tr>
+<tr>
+<td>Tolerance</td>
+<td>Tolerance of the keying. Increase make the keying colors less strict</td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>Gamma of each mask. The contrast of each internal masking operation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-switcher-from-selected">New Switcher From Selected</h3>
+<p><img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/images/new_switch.png" alt="New Switch From Selected">{: style=&quot;width:400px&quot;}</p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Socket Type</td>
+<td>Tolerance of the keying. Increase make the keying colors less strict</td>
+</tr>
+<tr>
+<td>Switch Type</td>
+<td>Method of switching. See <a href="#switch-types">switching types</a> section for more details.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="new-node-groups">New Node Groups</h2>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value Lerp</td>
+<td>Linear interpolation of a value.</td>
+</tr>
+<tr>
+<td>Vector Lerp</td>
+<td>Linear interpolation of a vector.</td>
+</tr>
+<tr>
+<td>Switch Node</td>
+<td>Primary addon function, the different switch nodes,</td>
+</tr>
+<tr>
+<td>RGB Key</td>
+<td>Color keyer node. Create a mask of the ID Map input using the Key color.</td>
+</tr>
+<tr>
+<td>ID Switcher</td>
+<td>Color based switching and mask generation based on the colors of an input.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="usage">Usage</h2>
+<h3 id="tutorial-create-switcher-for-id-map">Tutorial: Create Switcher for ID Map</h3>
+<p>Select and image node containing the id map to be switched. Open the context menu (default: Right Click) and select &quot;ID Switcher for Selected&quot;.</p>
+<iframe width="560" height="400" src="https://www.youtube.com/embed/ZFIZPFnB7xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
 <h3 id="tutorial-adding-a-switcher-for-selected">Tutorial: Adding a Switcher For Selected</h3>
-<p><img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/switcher_from_selected.gif" alt="New Switcher For Selected">
+<p><img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/switcher_from_selected.gif" alt="New Switcher For Selected"><br>
 After selecting the nodes whose sockets you want to switch. Right click in an empty space and select &quot;New Switcher For Selected Nodes&quot;. An operator will pop-up on which you can select the socket type to use for switching and a switching mode. See addon overview full descriptions of node switches.</p>
 <h3 id="tutorial-adding-a-new-switcher">Tutorial: Adding a New Switcher</h3>
-<p><img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/new_switcher.gif" alt="New Switcher">
+<p><img src="file:////home/morrison/active_projects/blender-addons/documentation/docs/Node_Switcher/gifs/new_switcher.gif" alt="New Switcher"><br>
 The switcher node is available under the add nodes menu. Selection will trigger a pop-up on which you can can select the number of input sockets and the type of switch to create.</p>
+<h3 id="tutorial-adding-bonus-nodes">Tutorial: Adding Bonus Nodes</h3>
+<p>All new nodes can be found in the add nodes menu under 'Converter'</p>
+
+    </body>
+    </html>
